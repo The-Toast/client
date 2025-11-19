@@ -7,13 +7,11 @@ export default function SplashScreen() {
 
   useEffect(() => {
     if (!hydrated) return
+
     const to = setTimeout(() => {
-      if (signedIn) {
-        router.replace('/(tabs)/home')
-      } else {
-        router.replace('/(auth)/login')
-      }
+      router.replace(signedIn ? '/(tabs)/home' : '/(auth)/login')
     }, 2000)
+
     return () => clearTimeout(to)
   }, [signedIn, hydrated])
 
