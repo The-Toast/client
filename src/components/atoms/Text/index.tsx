@@ -1,6 +1,6 @@
 import styled from '@emotion/native'
 import { typography } from 'styles/typography'
-import { fontWeightMap, FontWeight, defaultWeightByType } from 'styles/fonts'
+import { fontWeightMap, FontWeight } from 'styles/fonts'
 
 export type TextStyle = keyof typeof typography
 
@@ -13,7 +13,7 @@ type TextProps = {
 const StyledText = styled.Text<TextProps>`
   ${({ type = 'body1', weight, color = '#111' }) => {
     const t = typography[type]
-    const appliedWeight = weight ?? defaultWeightByType[type] ?? 'regular'
+    const appliedWeight = weight ?? t.weight
     const fontFamily = fontWeightMap[appliedWeight]
     return `
       font-family: ${fontFamily};
