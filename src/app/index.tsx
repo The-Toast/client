@@ -1,15 +1,5 @@
-import {Text, View} from 'react-native'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { Redirect } from 'expo-router'
 
 export default function RootIndex() {
-  return (
-    <SafeAreaView>
-      <View>
-        <Text>
-          Index Screen
-        </Text>
-      </View>
-    </SafeAreaView>
-
-  )
+  return <Redirect href='/(auth)/splash' />
 }

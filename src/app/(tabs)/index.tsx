@@ -1,11 +1,7 @@
 import { View, Text } from 'react-native'
 
-export default function HomeScreen() {
+export default function TabsIndex() {
   return (
-    <View>
-      <Text>
-        hi
-      </Text>
-    </View>
+    <></>
   )
 }
