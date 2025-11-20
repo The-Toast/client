@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react'
 import styled from '@emotion/native'
 import { PressableProps, StyleProp, ViewStyle, View } from 'react-native'
-import { Text } from 'components'
+import { Text } from 'uikit'
 import { buttonSizes, buttonVariants, ButtonSize, ButtonVariant } from 'styles'
 
 export type ButtonProps = PressableProps & {

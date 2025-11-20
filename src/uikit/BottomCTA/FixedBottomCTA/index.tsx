@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/native'
 import { StyleProp, ViewStyle } from 'react-native'
-import BottomCTA, { type BottomCTAProps } from '../BottomCTA'
+import BottomCTA, { type BottomCTAProps } from '../index'
 
 export type FixedBottomCTAProps = BottomCTAProps & {
   containerStyle?: StyleProp<ViewStyle>
