@@ -1,6 +1,6 @@
 import styled from '@emotion/native'
 import { typography } from 'styles/typography'
-import { fontWeightMap, FontWeight } from 'styles/fonts'
+import { fontWeightMap, FontWeight } from '@/styles/tokens/fonts'
 
 export type TextStyle = keyof typeof typography
 

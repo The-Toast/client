@@ -10,7 +10,7 @@ import * as SplashScreen from 'expo-splash-screen'
 
 export default function RootLayout() {
   const [fontsLoaded] = useFonts({
-    'Pretendard': require('../../assets/fonts/Pretendard-Medium.otf'),
+    'Pretendard-Medium': require('../../assets/fonts/Pretendard-Medium.otf'),
     'Pretendard-Regular': require('../../assets/fonts/Pretendard-Regular.otf'),
     'Pretendard-SemiBold': require('../../assets/fonts/Pretendard-SemiBold.otf')
   })
