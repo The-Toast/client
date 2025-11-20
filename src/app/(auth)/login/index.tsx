@@ -1,5 +1,5 @@
 import { SafeArea } from 'components/layout'
-import { Button } from 'uikit'
+import { FixedBottomCTA } from 'uikit'
 
 /**
  * components/layout/SafeArea.tsx 코드 테스트중
@@ -7,8 +7,8 @@ import { Button } from 'uikit'
 
 export default function LoginScreen() {
   return (
-    <SafeArea>
-      <Button size={'medium'} disabled={true}>Login</Button>
+    <SafeArea adjustBottomInset={true} style={{ width: '100%', height: '100%' }}>
+      <FixedBottomCTA disabled={false}>다음</FixedBottomCTA>
     </SafeArea>
   )
 }
