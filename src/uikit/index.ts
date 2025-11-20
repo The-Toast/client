@@ -1,4 +1,4 @@
 export { default as Button } from './Button'
 export { default as BottomCTA } from './BottomCTA'
 export { default as FixedBottomCTA } from './BottomCTA/FixedBottomCTA'
-export { default as Text } from './Text/index'
+export { default as Text } from './Text'

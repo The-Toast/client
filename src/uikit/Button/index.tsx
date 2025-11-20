@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, memo } from 'react'
 import styled from '@emotion/native'
 import { PressableProps, StyleProp, ViewStyle, View } from 'react-native'
 import { Text } from 'uikit'
@@ -29,33 +29,37 @@ const StyledButton = styled.Pressable<{
   borderRadius: radius
 }))
 
-export default forwardRef<View, ButtonProps>(function Button(
-  { children, size = 'medium', variant = 'primary', disabled, style, accessibilityRole, hitSlop, ...rest },
-  ref
-) {
-  const s = buttonSizes[size]
-  const v = buttonVariants[variant]
+const Button = forwardRef<View, ButtonProps>(
+  (
+    { children, size = 'medium', variant = 'primary', disabled, style, accessibilityRole, hitSlop, ...rest },
+    ref
+  ) => {
+    const s = buttonSizes[size]
+    const v = buttonVariants[variant]
 
-  const isDisabled = !!disabled
-  const bg = isDisabled && v.Disabled ? v.Disabled.Background : v.Background
-  const textColor = isDisabled && v.Disabled ? v.Disabled.Color : v.Color
+    const isDisabled = !!disabled
+    const bg = isDisabled && v.Disabled ? v.Disabled.Background : v.Background
+    const textColor = isDisabled && v.Disabled ? v.Disabled.Color : v.Color
 
-  return (
-    <StyledButton
-      ref={ref}
-      bg={bg}
-      height={s.height}
-      radius={s.radius}
-      paddingHorizontal={s.padding}
-      disabled={isDisabled}
-      style={style}
-      accessibilityRole={accessibilityRole ?? 'button'}
-      hitSlop={hitSlop ?? { top: 6, bottom: 6, left: 6, right: 6 }}
-      {...rest}
-    >
-      <Text type={s.textType} color={textColor}>
-        {children}
-      </Text>
-    </StyledButton>
-  )
-})
+    return (
+      <StyledButton
+        ref={ref}
+        bg={bg}
+        height={s.height}
+        radius={s.radius}
+        paddingHorizontal={s.padding}
+        disabled={isDisabled}
+        style={style}
+        accessibilityRole={accessibilityRole ?? 'button'}
+        hitSlop={hitSlop ?? { top: 6, bottom: 6, left: 6, right: 6 }}
+        {...rest}
+      >
+        <Text type={s.textType} color={textColor}>
+          {children}
+        </Text>
+      </StyledButton>
+    )
+  }
+)
+
+export default memo(Button)
