@@ -1,13 +1,8 @@
 import styled from '@emotion/native'
-import { Typography, fontWeightMap, type FontWeight } from 'styles'
+import { TextProps } from './types'
+import { Typography, fontWeightMap } from 'styles'
 
 export type TextStyle = keyof typeof Typography
-
-export type TextProps = {
-  type?: TextStyle
-  weight?: FontWeight
-  color?: string
-}
 
 const Text = styled.Text<TextProps>(({ type = 'body1', weight, color = '#111' }) => {
   const t = Typography[type]

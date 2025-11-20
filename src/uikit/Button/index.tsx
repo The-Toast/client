@@ -1,15 +1,11 @@
 import React, { forwardRef, memo } from 'react'
 import styled from '@emotion/native'
-import { PressableProps, StyleProp, ViewStyle, View } from 'react-native'
+import { View } from 'react-native'
 import { Text } from 'uikit'
-import { buttonSizes, buttonVariants, ButtonSize, ButtonVariant } from 'styles'
+import { ButtonProps } from './types'
+import { buttonSizes, buttonVariants } from 'styles'
 
-export type ButtonProps = PressableProps & {
-  children: string
-  size?: ButtonSize
-  variant?: ButtonVariant
-  style?: StyleProp<ViewStyle>
-}
+export type { ButtonProps } from './types'
 
 const StyledButton = styled.Pressable<{
   bg: string
