@@ -7,19 +7,19 @@ export const buttonSizes = {
   },
   medium: {
     height: 38,
-    paddingHorizontal: 16,
+    padding: 16,
     radius: 10,
     textType: 'button2',
   },
   large: {
     height: 48,
-    paddingHorizontal: 16,
+    padding: 16,
     radius: 14,
     textType: 'button1',
   },
   xlarge: {
     height: 56,
-    paddingHorizontal: 28,
+    padding: 28,
     radius: 16,
     textType: 'button1'
   }
