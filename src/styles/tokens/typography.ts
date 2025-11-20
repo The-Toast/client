@@ -31,7 +31,7 @@ const t = (fontSize: number, lineHeight: number, weight: FontWeight): Typography
   weight,
 })
 
-export const typography: Record<TypographyKey, TypographyToken> = {
+export const Typography: Record<TypographyKey, TypographyToken> = {
   // Headline
   headline1: t(32, 40, 'SemiBold'),
   headline2: t(28, 36, 'SemiBold'),

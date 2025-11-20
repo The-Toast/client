@@ -2,7 +2,7 @@ import 'react-native-reanimated'
 import { useEffect } from 'react'
 import { Stack } from 'expo-router'
 import { useFonts } from 'expo-font'
-import { theme } from 'styles/theme'
+import { Color } from 'styles'
 import { ThemeProvider } from '@emotion/react'
 import { AuthProvider } from 'providers/AuthProvider'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
@@ -26,7 +26,7 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={Color}>
       <SafeAreaProvider>
         <AuthProvider>
           <Stack screenOptions={{ headerShown: false }}>

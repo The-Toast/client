@@ -1,8 +1,8 @@
 import styled from '@emotion/native'
-import { typography } from 'styles/typography'
+import { Typography } from 'styles'
 import { fontWeightMap, FontWeight } from '@/styles/tokens/fonts'
 
-export type TextStyle = keyof typeof typography
+export type TextStyle = keyof typeof Typography
 
 type TextProps = {
   type?: TextStyle
@@ -12,7 +12,7 @@ type TextProps = {
 
 const StyledText = styled.Text<TextProps>`
   ${({ type = 'body1', weight, color = '#111' }) => {
-    const t = typography[type]
+    const t = Typography[type]
     const appliedWeight = weight ?? t.weight
     const fontFamily = fontWeightMap[appliedWeight]
     return `
