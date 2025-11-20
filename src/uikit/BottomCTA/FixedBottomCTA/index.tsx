@@ -2,6 +2,7 @@ import React from 'react'
 import styled from '@emotion/native'
 import { StyleProp, ViewStyle } from 'react-native'
 import BottomCTA, { type BottomCTAProps } from '../index'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
 export type FixedBottomCTAProps = BottomCTAProps & {
   containerStyle?: StyleProp<ViewStyle>
@@ -17,13 +18,12 @@ const Container = styled.View({
 })
 
 export default function FixedBottomCTA({ children, style, containerStyle, ...rest }: FixedBottomCTAProps) {
+  const insets = useSafeAreaInsets()
+  const extraBottom = insets.bottom === 34 ? 14 : 0
+
   return (
-    <Container
-      style={containerStyle}
-    >
-      <BottomCTA style={[{ width: '100%', alignSelf: 'stretch' }, style]}
-        {...rest}
-      >
+    <Container style={[containerStyle, extraBottom ? { paddingBottom: extraBottom } : null]}>
+      <BottomCTA style={[{ width: '100%', alignSelf: 'stretch' }, style]} {...rest}>
         {children}
       </BottomCTA>
     </Container>

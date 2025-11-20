@@ -7,7 +7,7 @@ import {
 
 type Props = SafeAreaViewProps & { adjustBottomInset?: boolean }
 
-const SafeArea: React.FC<Props> = ({ adjustBottomInset = false, style, edges, ...rest }) => {
+export default function SafeArea({ adjustBottomInset = false, style, edges, ...rest }: Props) {
   const insets = useSafeAreaInsets()
   const shouldAdjust = adjustBottomInset && insets.bottom === 34
 
@@ -20,5 +20,3 @@ const SafeArea: React.FC<Props> = ({ adjustBottomInset = false, style, edges, ..
 
   return <RNSafeAreaView style={finalStyle} edges={finalEdges} {...rest} />
 }
-
-export default SafeArea

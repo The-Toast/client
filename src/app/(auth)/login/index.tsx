@@ -1,4 +1,4 @@
-import { SafeArea } from 'components/layout'
+import { SafeArea, Section } from 'components/layout'
 import { FixedBottomCTA, Text } from 'uikit'
 
 /**
@@ -8,7 +8,9 @@ import { FixedBottomCTA, Text } from 'uikit'
 export default function LoginScreen() {
   return (
     <SafeArea style={{ width: '100%', height: '100%' }}>
-      <Text type={'title2'}>이메일을 입력하세요</Text>
+      <Section>
+        <Text type={'title1'}>학번을 입력하세요</Text>
+      </Section>
       <FixedBottomCTA disabled={false}>다음</FixedBottomCTA>
     </SafeArea>
   )
