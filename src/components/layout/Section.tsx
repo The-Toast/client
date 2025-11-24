@@ -9,6 +9,7 @@ export const Container = styled.View({
 
 export const Content = styled.View({
   paddingTop: 60,
+  gap: 24,
   width: '100%',
 })
 

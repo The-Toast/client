@@ -4,6 +4,7 @@ export type TextFieldProps = {
   value?: string | number
   defaultValue?: string
   onChangeText?: (text: string) => void
+  onSubmitEditing?: () => void
   label?: string
   help?: ReactNode
   hasError?: boolean
@@ -15,4 +16,6 @@ export type TextFieldProps = {
   keyboardType?: 'default' | 'numeric' | 'email-address'
   maxLength?: number
   editable?: boolean
+  returnKeyType?: 'done' | 'next' | 'go' | 'send' | 'search' | 'default'
+  secureTextEntry?: boolean
 }
