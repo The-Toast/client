@@ -18,7 +18,7 @@ const StyledButton = styled.Pressable<{
   paddingHorizontal,
   justifyContent: 'center',
   alignItems: 'center',
-  alignSelf: 'flex-start',
+  alignSelf: 'center',
 
   // Style
   backgroundColor: bg,
@@ -57,5 +57,8 @@ const Button = forwardRef<View, ButtonProps>(
     )
   }
 )
+
+// For ESLint react/display-name: explicitly set displayName for forwardRef-wrapped component
+Button.displayName = 'Button'
 
 export default memo(Button)

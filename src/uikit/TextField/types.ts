@@ -1,4 +1,5 @@
-import { ReactNode } from 'react'
+import { ReactNode, Ref } from 'react'
+import { TextInput } from 'react-native'
 
 export type TextFieldProps = {
   value?: string | number
@@ -18,4 +19,6 @@ export type TextFieldProps = {
   editable?: boolean
   returnKeyType?: 'done' | 'next' | 'go' | 'send' | 'search' | 'default'
   secureTextEntry?: boolean
+  // 내부 TextInput에 접근하기 위한 ref (포커스 제어 등)
+  inputRef?: Ref<TextInput>
 }
